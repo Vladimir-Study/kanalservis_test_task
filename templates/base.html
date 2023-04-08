@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="header">
+            <span>Тестовое задание</span>
+        </header>
+        <hr>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+            <div class="show_data" id="insert">
+                <div class="data_headers">
+                    <div>
+                        <span class="number_headers">Номер заказа</span>
+                    </div>
+                    <div>
+                        <span class="dollar_headers">Цена в долларах</span>
+                    </div>
+                    <div>
+                        <span class="rur_headers">Цена в рублях</span>
+                    </div>
+                    <div>
+                        <span class="date_headers">Срок поставки</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+</html>
